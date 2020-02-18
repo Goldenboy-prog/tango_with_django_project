@@ -1,0 +1,14 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Restricted Page
+{% endblock %}
+
+{% block body_block %}
+{% if user.is_authenticated %}
+	<h1>"You are logged in!</h1>
+{% else %}
+	<h1>"You are not logged in and can´t add pages or categories :("</h1>
+{% endif %}
+{% endblock %}
